@@ -10,7 +10,7 @@ jobs:
         run: echo Hello, Test World!
   
 
-deploy-dev:
+dev:
   runs-on: ubuntu-latest
   environment:
     name: dev
@@ -20,7 +20,7 @@ deploy-dev:
     - name: Run a one-line script
       run: echo Deplos Dev
       
-deploy-hmg:
+hmg:
   runs-on: ubuntu-latest
   environment:
     name: hmg
@@ -28,9 +28,9 @@ deploy-hmg:
   needs: deploy-dev
   steps:
     - name: Run a one-line script
-      run: echo Deplos HMG     
+      run: echo Deplos HMG    
       
-deploy-prd:
+prd:
   runs-on: ubuntu-latest
   environment:
     name: prd
